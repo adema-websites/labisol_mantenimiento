@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web en Mantenimiento | Labisol Glow</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Variables de color basadas en styles.css para consistencia */
+        :root {
+            --primary-color: #b4d8c3;        /* Verde menta principal */
+            --secondary-color: #d4e8f0;      /* Azul pastel suave */
+            --background-color: #f8fdf9;     /* Blanco menta muy suave */
+            --text-color: #6b7b73;           /* Verde grisáceo muted */
+            --whatsapp-color: #25d366;       /* Color oficial de WhatsApp */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .maintenance-container {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .maintenance-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #888;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Estilo del botón de WhatsApp (similar al add-to-cart o whatsapp-float) */
+        .whatsapp-redirect-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--whatsapp-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-redirect-btn:hover {
+            background-color: #20b358; /* Tono más oscuro de WhatsApp */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-redirect-btn i {
+            font-size: 1.5rem;
+        }
+
+        /* Footer discreto */
+        .maintenance-footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <div class="maintenance-container">
+        <i class="fas fa-tools maintenance-icon"></i>
+        
+        <h1>¡Volvemos enseguida!</h1>
+        <h2>Nuestra Web está en Mantenimiento.</h2>
+        
+        <p>
+            Estamos trabajando arduamente para mejorar tu experiencia. 
+            Mientras tanto, puedes contactarnos directamente para realizar tu pedido o consulta.
+        </p>
+
+        <a id="whatsapp-link" 
+           href="https://api.whatsapp.com/send?phone=+5491171749999&text=Hola!%20Quisiera%20realizar%20una%20consulta%20sobre%20sus%20productos."
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="whatsapp-redirect-btn">
+            <i class="fab fa-whatsapp"></i>
+            Contactar por WhatsApp
+        </a>
+        
+        <div class="maintenance-footer">
+            <p>
+                &copy; 2025 Labisol Glow. 
+                Gracias por tu paciencia.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
